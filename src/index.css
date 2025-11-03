@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MiBuks Design System - Professional Fintech Theme for Sierra Leone
+All colors MUST be HSL. Professional blues and prosperity greens.
+*/
+
+@layer base {
+  :root {
+    /* MiBuks Professional Theme - Light Mode */
+    --background: 215 20% 98%; /* slate-50 */
+    --foreground: 215 25% 27%; /* slate-700 */
+
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Professional Trust Blue */
+    --primary: 217 91% 60%; /* blue-500 */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 55%; /* blue-600 */
+
+    /* Prosperity Green */
+    --secondary: 160 84% 39%; /* emerald-600 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 20% 96%; /* slate-100 */
+    --muted-foreground: 215 16% 47%; /* slate-500 */
+
+    --accent: 215 20% 96%;
+    --accent-foreground: 215 25% 27%;
+
+    --destructive: 0 84% 60%; /* red-500 */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 91%; /* slate-200 */
+    --input: 215 20% 91%;
+    --ring: 217 91% 60%;
+
+    /* MiBuks Custom Colors */
+    --fintech-blue: 217 91% 60%;
+    --fintech-blue-dark: 217 91% 55%;
+    --prosperity-green: 160 84% 39%;
+    --prosperity-green-light: 160 84% 45%;
+    --success: 160 84% 39%;
+    --warning: 43 96% 56%; /* amber-400 */
+    --info: 199 89% 48%; /* sky-500 */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(160 84% 39%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(215 20% 98%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 20% 98%), hsl(215 25% 96%));
+
+    /* Shadows */
+    --shadow-elegant: 0 4px 20px -2px hsl(217 91% 60% / 0.1);
+    --shadow-card: 0 2px 8px -1px hsl(215 25% 27% / 0.1);
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.2);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5% 26%;
+
+    --sidebar-primary: 240 6% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 5% 96%;
+
+    --sidebar-accent-foreground: 240 6% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    /* MiBuks Professional Theme - Dark Mode */
+    --background: 215 28% 17%; /* slate-800 */
+    --foreground: 215 20% 98%; /* slate-50 */
+
+    --card: 215 25% 20%; /* slate-700 */
+    --card-foreground: 215 20% 98%;
+
+    --popover: 215 25% 20%;
+    --popover-foreground: 215 20% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 65%;
+
+    --secondary: 160 84% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 25% 25%; /* slate-600 */
+    --muted-foreground: 215 13% 65%; /* slate-400 */
+
+    --accent: 215 25% 25%;
+    --accent-foreground: 215 20% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 25%;
+    --input: 215 25% 25%;
+    --ring: 217 91% 60%;
+
+    /* MiBuks Dark Custom Colors */
+    --fintech-blue: 217 91% 60%;
+    --fintech-blue-dark: 217 91% 65%;
+    --prosperity-green: 160 84% 45%;
+    --prosperity-green-light: 160 84% 50%;
+    --success: 160 84% 45%;
+    --warning: 43 96% 56%;
+    --info: 199 89% 48%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(160 84% 45%));
+    --gradient-card: linear-gradient(145deg, hsl(215 25% 20%), hsl(215 28% 17%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 28% 17%), hsl(215 25% 20%));
+
+    /* Dark Shadows */
+    --shadow-elegant: 0 4px 20px -2px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 2px 8px -1px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.3);
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 224 76% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Professional animations and transitions */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .professional-card {
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s ease;
+  }
+
+  .professional-card:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

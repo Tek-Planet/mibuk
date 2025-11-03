@@ -1,0 +1,10 @@
+project_id = "lgstierfmiezdeqhwyap"
+
+[functions.delete-user]
+verify_jwt = true
+
+[functions.send-invitation]
+verify_jwt = true
+
+[functions.send-shared-document]
+verify_jwt = true

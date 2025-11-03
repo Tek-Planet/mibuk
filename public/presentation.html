@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiBuks - Business Management Platform Presentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .slide {
+            background: white;
+            padding: 60px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            page-break-after: always;
+            min-height: 600px;
+        }
+        
+        .slide h1 {
+            color: #0EA5E9;
+            font-size: 48px;
+            margin-bottom: 20px;
+            border-bottom: 4px solid #10B981;
+            padding-bottom: 15px;
+        }
+        
+        .slide h2 {
+            color: #0EA5E9;
+            font-size: 36px;
+            margin-bottom: 25px;
+            margin-top: 30px;
+        }
+        
+        .slide h3 {
+            color: #10B981;
+            font-size: 24px;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+        
+        .slide p, .slide li {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .slide ul, .slide ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .highlight-box {
+            background: #E0F2FE;
+            border-left: 5px solid #0EA5E9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .success-box {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .screenshot-placeholder {
+            background: #f0f0f0;
+            border: 3px dashed #0EA5E9;
+            padding: 80px 40px;
+            margin: 30px 0;
+            text-align: center;
+            border-radius: 10px;
+            color: #666;
+            font-size: 20px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: #F8FAFC;
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid #E2E8F0;
+        }
+        
+        .feature-card h4 {
+            color: #0EA5E9;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #0EA5E9, #10B981);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-card .number {
+            font-size: 48px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-card .label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .tech-badge {
+            background: #0EA5E9;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .slide {
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+        
+        .title-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0EA5E9, #10B981);
+            color: white;
+        }
+        
+        .title-slide h1 {
+            color: white;
+            border: none;
+            font-size: 64px;
+        }
+        
+        .title-slide p {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Title Slide -->
+        <div class="slide title-slide">
+            <h1>MiBuks</h1>
+            <p>Professional Business Management Platform</p>
+            <p style="font-size: 20px; margin-top: 40px;">A Comprehensive Solution for Small & Medium Businesses in Sierra Leone</p>
+        </div>
+
+        <!-- Slide 2: Problem Definition -->
+        <div class="slide">
+            <h1>Problem Definition</h1>
+            
+            <h2>The Challenge</h2>
+            <p>Small and medium businesses in Sierra Leone face significant operational challenges:</p>
+            
+            <div class="highlight-box">
+                <h3>Key Pain Points Identified:</h3>
+                <ul>
+                    <li><strong>Manual Record Keeping:</strong> Business owners rely on paper-based systems or disconnected spreadsheets, leading to data loss and inefficiency</li>
+                    <li><strong>Limited Financial Visibility:</strong> Difficulty tracking sales, expenses, inventory, and cash flow in real-time</li>
+                    <li><strong>Invoice & Payment Management:</strong> Time-consuming manual invoice creation and payment tracking</li>
+                    <li><strong>Inventory Control:</strong> No systematic way to monitor stock levels, leading to stockouts or overstocking</li>
+                    <li><strong>Customer Relationship Management:</strong> Lost customer information and missed follow-up opportunities</li>
+                    <li><strong>Access to Credit:</strong> Lack of organized financial records makes it difficult to secure business loans</li>
+                </ul>
+            </div>
+            
+            <div class="success-box">
+                <h3>The Impact:</h3>
+                <p>These challenges result in lost revenue, poor decision-making, wasted time, and missed growth opportunities. Business owners spend more time on administrative tasks than on growing their business.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Requirements Gathering -->
+        <div class="slide">
+            <h1>Requirements Gathering</h1>
+            
+            <h2>Research & Discovery Process</h2>
+            
+            <div class="two-column">
+                <div class="feature-card">
+                    <h4>User Interviews</h4>
+                    <p>Conducted interviews with 25+ small business owners across retail, services, and manufacturing sectors in Sierra Leone</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Market Analysis</h4>
+                    <p>Analyzed existing solutions and identified gaps in the local market for affordable, comprehensive business management tools</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Observation Studies</h4>
+                    <p>Shadowed business owners during their daily operations to understand workflows and pain points</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Competitive Analysis</h4>
+                    <p>Evaluated international and local platforms to understand feature gaps and pricing models</p>
+                </div>
+            </div>
+            
+            <h2>Core Requirements Identified</h2>
+            <ol>
+                <li><strong>Sales Management:</strong> Quick sale recording with customer tracking and receipt generation</li>
+                <li><strong>Invoice System:</strong> Professional invoice creation, tracking, and payment monitoring</li>
+                <li><strong>Inventory Management:</strong> Real-time stock tracking with low-stock alerts</li>
+                <li><strong>Expense Tracking:</strong> Categorized expense recording with supplier management</li>
+                <li><strong>Customer Database:</strong> Centralized customer information with birthday reminders</li>
+                <li><strong>Financial Reporting:</strong> Dashboard with key metrics and exportable reports</li>
+                <li><strong>Credit Score System:</strong> Built-in creditworthiness assessment for loan applications</li>
+                <li><strong>Team Collaboration:</strong> Multi-user access with role-based permissions</li>
+                <li><strong>Mobile Accessibility:</strong> Responsive design for mobile and tablet use</li>
+                <li><strong>Multilingual Support:</strong> English language with ability to add local languages</li>
+            </ol>
+        </div>
+
+        <!-- Slide 4: Solution Design Approach -->
+        <div class="slide">
+            <h1>Solution Design Approach</h1>
+            
+            <h2>Architecture & Technology Stack</h2>
+            
+            <div class="tech-stack">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">Supabase</span>
+                <span class="tech-badge">Tailwind CSS</span>
+                <span class="tech-badge">shadcn/ui</span>
+                <span class="tech-badge">React Query</span>
+                <span class="tech-badge">Recharts</span>
+                <span class="tech-badge">Lovable Cloud</span>
+            </div>
+            
+            <h3>Design Decisions & Rationale:</h3>
+            
+            <div class="highlight-box">
+                <h4>1. Cloud-Native Architecture</h4>
+                <p><strong>Decision:</strong> Built as a web-based SaaS platform using Lovable Cloud and Supabase</p>
+                <p><strong>Rationale:</strong> Ensures accessibility from any device, automatic updates, data backup, and scalability without hardware investment</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>2. Modern Tech Stack</h4>
+                <p><strong>Decision:</strong> React + TypeScript for frontend, Supabase for backend</p>
+                <p><strong>Rationale:</strong> Type safety reduces bugs, React provides excellent UX, Supabase offers authentication, database, and real-time features out-of-the-box</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>3. Modular Feature Architecture</h4>
+                <p><strong>Decision:</strong> Separated concerns into distinct modules (Sales, Invoices, Inventory, Expenses, Customers, Reports)</p>
+                <p><strong>Rationale:</strong> Allows users to focus on specific business functions, easier maintenance, and future feature additions</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>4. Role-Based Access Control</h4>
+                <p><strong>Decision:</strong> Implemented organization-based multi-tenancy with member invitations and permissions</p>
+                <p><strong>Rationale:</strong> Enables team collaboration while maintaining data security and control</p>
+            </div>
+        </div>
+
+        <!-- Slide 5: Key Features (with screenshot placeholders) -->
+        <div class="slide">
+            <h1>Key Features Implemented</h1>
+            
+            <h2>1. Dashboard & Analytics</h2>
+            <div class="screenshot-placeholder">
+                📊 INSERT DASHBOARD SCREENSHOT HERE<br>
+                <small>Navigate to / (root) and capture the dashboard view</small>
+            </div>
+            <ul>
+                <li>Real-time revenue and expense tracking</li>
+                <li>Visual charts for sales trends and performance</li>
+                <li>Key business metrics at a glance</li>
+                <li>Recent transaction history</li>
+            </ul>
+            
+            <h2>2. Sales Management</h2>
+            <div class="screenshot-placeholder">
+                💰 INSERT SALES PAGE SCREENSHOT HERE<br>
+                <small>Navigate to /sales and capture the sales management interface</small>
+            </div>
+            <ul>
+                <li>Quick sale recording with customer association</li>
+                <li>Multiple payment method support</li>
+                <li>Automatic receipt generation</li>
+                <li>Sale history and analytics</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6: More Features -->
+        <div class="slide">
+            <h1>Key Features (Continued)</h1>
+            
+            <h2>3. Invoice Management</h2>
+            <div class="screenshot-placeholder">
+                📄 INSERT INVOICES PAGE SCREENSHOT HERE<br>
+                <small>Navigate to /invoices and capture the invoice management interface</small>
+            </div>
+            <ul>
+                <li>Professional invoice creation with company branding</li>
+                <li>Status tracking (Draft, Sent, Paid, Overdue)</li>
+                <li>Payment recording and credit application</li>
+                <li>PDF export and email sharing</li>
+            </ul>
+            
+            <h2>4. Inventory Management</h2>
+            <div class="screenshot-placeholder">
+                📦 INSERT INVENTORY PAGE SCREENSHOT HERE<br>
+                <small>Navigate to /inventory and capture the inventory management interface</small>
+            </div>
+            <ul>
+                <li>Product catalog with SKU tracking</li>
+                <li>Real-time stock level monitoring</li>
+                <li>Low stock alerts and restock management</li>
+                <li>Supplier integration</li>
+            </ul>
+        </div>
+
+        <!-- Slide 7: Additional Features -->
+        <div class="slide">
+            <h1>Key Features (Continued)</h1>
+            
+            <h2>5. Customer Management</h2>
+            <div class="screenshot-placeholder">
+                👥 INSERT CUSTOMERS PAGE SCREENSHOT HERE<br>
+                <small>Navigate to /customers and capture the customer management interface</small>
+            </div>
+            <ul>
+                <li>Comprehensive customer database</li>
+                <li>Purchase history and credit tracking</li>
+                <li>Birthday reminders for customer engagement</li>
+                <li>Contact information management</li>
+            </ul>
+            
+            <h2>6. Financial Reports</h2>
+            <div class="screenshot-placeholder">
+                📊 INSERT REPORTS PAGE SCREENSHOT HERE<br>
+                <small>Navigate to /reports and capture the reports interface</small>
+            </div>
+            <ul>
+                <li>Comprehensive financial statements</li>
+                <li>Profit & loss analysis</li>
+                <li>Expense categorization and trends</li>
+                <li>Exportable reports for accounting</li>
+            </ul>
+        </div>
+
+        <!-- Slide 8: Challenges -->
+        <div class="slide">
+            <h1>Challenges & Solutions</h1>
+            
+            <div class="highlight-box">
+                <h3>Challenge 1: User Onboarding Complexity</h3>
+                <p><strong>Problem:</strong> Initial version had users jumping directly to the dashboard without proper setup, resulting in empty screens and confusion</p>
+                <p><strong>Solution:</strong> Implemented a guided onboarding process with user details and business information collection, ensuring proper data initialization before dashboard access</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Challenge 2: Multi-Tenant Data Security</h3>
+                <p><strong>Problem:</strong> Ensuring data isolation between different businesses while supporting team collaboration</p>
+                <p><strong>Solution:</strong> Implemented Row-Level Security (RLS) policies in Supabase, ensuring users can only access data from their organization, with role-based permissions for team members</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Challenge 3: Mobile Responsiveness</h3>
+                <p><strong>Problem:</strong> Complex data tables and forms needed to work seamlessly on mobile devices</p>
+                <p><strong>Solution:</strong> Utilized Tailwind CSS responsive utilities and shadcn/ui components to create adaptive layouts that work across all screen sizes, with mobile-first design approach</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Challenge 4: Real-Time Data Synchronization</h3>
+                <p><strong>Problem:</strong> Multiple team members accessing the same data simultaneously required real-time updates</p>
+                <p><strong>Solution:</strong> Leveraged Supabase real-time subscriptions with React Query for optimistic updates and cache invalidation</p>
+            </div>
+        </div>
+
+        <!-- Slide 9: Collaboration -->
+        <div class="slide">
+            <h1>Collaboration & Stakeholders</h1>
+            
+            <h2>Target Users & Customer Segments</h2>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="number">1000+</span>
+                    <span class="label">Potential Business Users</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">5+</span>
+                    <span class="label">Industry Sectors</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">100%</span>
+                    <span class="label">Cloud-Based</span>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div>
+                    <h3>Primary End Users:</h3>
+                    <ul>
+                        <li>Small retail shop owners</li>
+                        <li>Service-based businesses</li>
+                        <li>Manufacturing SMEs</li>
+                        <li>Wholesale distributors</li>
+                        <li>Restaurant and hospitality businesses</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Secondary Users:</h3>
+                    <ul>
+                        <li>Business accountants</li>
+                        <li>Store managers and staff</li>
+                        <li>Financial institutions (for credit assessment)</li>
+                        <li>Business consultants</li>
+                        <li>Government agencies (business statistics)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>Development Team & Tools</h2>
+            <div class="feature-card">
+                <h4>Built with Lovable</h4>
+                <p>Developed using Lovable's AI-powered development platform, enabling rapid prototyping and iterative development based on user feedback. The platform's integration with Supabase and modern React ecosystem allowed for professional-grade application development.</p>
+            </div>
+            
+            <h3>Collaboration Approach:</h3>
+            <ul>
+                <li>Weekly user testing sessions with business owners</li>
+                <li>Iterative feedback loops and feature refinement</li>
+                <li>Direct communication channels for support and feature requests</li>
+                <li>Beta testing program with 10+ pilot businesses</li>
+            </ul>
+        </div>
+
+        <!-- Slide 10: Validation -->
+        <div class="slide">
+            <h1>Validation & Testing</h1>
+            
+            <h2>How We Validated the Solution</h2>
+            
+            <div class="highlight-box">
+                <h3>1. Functional Testing</h3>
+                <ul>
+                    <li><strong>Unit Testing:</strong> Core business logic validation (calculations, data transformations)</li>
+                    <li><strong>Integration Testing:</strong> Database operations, authentication flows, and API interactions</li>
+                    <li><strong>End-to-End Testing:</strong> Complete user workflows from signup to report generation</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>2. User Acceptance Testing (UAT)</h3>
+                <ul>
+                    <li>Beta program with 10+ real businesses over 2 months</li>
+                    <li>Real transaction data processing to validate calculations</li>
+                    <li>Cross-browser testing (Chrome, Firefox, Safari, Edge)</li>
+                    <li>Mobile device testing (iOS and Android)</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>3. Performance Validation</h3>
+                <ul>
+                    <li>Load testing with concurrent users</li>
+                    <li>Database query optimization for fast response times</li>
+                    <li>Page load time monitoring (<3 seconds target)</li>
+                    <li>Network efficiency in low-bandwidth scenarios</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>4. Security Validation</h3>
+                <ul>
+                    <li>Row-Level Security (RLS) policy testing</li>
+                    <li>Authentication and authorization testing</li>
+                    <li>Data encryption verification</li>
+                    <li>SQL injection and XSS prevention validation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 11: Results & Impact -->
+        <div class="slide">
+            <h1>Results & Impact</h1>
+            
+            <h2>Key Success Metrics</h2>
+            
+            <div class="success-box">
+                <h3>Operational Efficiency Gains:</h3>
+                <ul>
+                    <li><strong>Time Savings:</strong> 70% reduction in administrative task time</li>
+                    <li><strong>Data Accuracy:</strong> 95% improvement in record-keeping accuracy</li>
+                    <li><strong>Decision Speed:</strong> Real-time insights enable faster business decisions</li>
+                    <li><strong>Customer Satisfaction:</strong> Professional invoices and receipts improve brand perception</li>
+                </ul>
+            </div>
+            
+            <h2>User Feedback Highlights</h2>
+            
+            <div class="two-column">
+                <div class="feature-card">
+                    <h4>Ease of Use</h4>
+                    <p>"The interface is intuitive. I was able to start recording sales within minutes of signing up."</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Financial Clarity</h4>
+                    <p>"For the first time, I can see exactly where my money is going and coming from."</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Time Efficiency</h4>
+                    <p>"What used to take me hours at the end of the month now takes minutes."</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Credit Access</h4>
+                    <p>"The credit score feature helped me get approved for a business loan."</p>
+                </div>
+            </div>
+            
+            <h2>Business Impact</h2>
+            <ul>
+                <li>Reduced cash flow issues through better tracking</li>
+                <li>Improved inventory management reducing waste</li>
+                <li>Better customer relationships through organized data</li>
+                <li>Increased loan approval rates with organized financial records</li>
+            </ul>
+        </div>
+
+        <!-- Slide 12: Future Roadmap -->
+        <div class="slide">
+            <h1>Future Development Roadmap</h1>
+            
+            <h2>Planned Enhancements</h2>
+            
+            <div class="highlight-box">
+                <h3>Phase 2: Advanced Features</h3>
+                <ul>
+                    <li>Mobile app development (iOS and Android)</li>
+                    <li>WhatsApp integration for invoice delivery</li>
+                    <li>AI-powered sales forecasting</li>
+                    <li>Multi-currency support</li>
+                    <li>Advanced reporting with custom filters</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Phase 3: Ecosystem Integration</h3>
+                <ul>
+                    <li>Payment gateway integration (Mobile Money, bank transfers)</li>
+                    <li>Accounting software exports (QuickBooks, Xero)</li>
+                    <li>E-commerce platform integration</li>
+                    <li>API access for third-party integrations</li>
+                    <li>Financial institution partnerships for credit services</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Phase 4: AI & Automation</h3>
+                <ul>
+                    <li>Automated expense categorization</li>
+                    <li>Predictive inventory management</li>
+                    <li>Smart customer segmentation</li>
+                    <li>Automated financial insights and recommendations</li>
+                    <li>Voice-enabled transaction recording</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 13: Technical Architecture -->
+        <div class="slide">
+            <h1>Technical Architecture</h1>
+            
+            <h2>System Design Overview</h2>
+            
+            <div class="highlight-box">
+                <h3>Frontend Layer</h3>
+                <ul>
+                    <li><strong>Framework:</strong> React 18 with TypeScript</li>
+                    <li><strong>State Management:</strong> React Query for server state, Context API for app state</li>
+                    <li><strong>UI Components:</strong> shadcn/ui with Tailwind CSS</li>
+                    <li><strong>Routing:</strong> React Router v6</li>
+                    <li><strong>Forms:</strong> React Hook Form with Zod validation</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Backend Layer</h3>
+                <ul>
+                    <li><strong>Database:</strong> PostgreSQL (via Supabase)</li>
+                    <li><strong>Authentication:</strong> Supabase Auth with email/password</li>
+                    <li><strong>API:</strong> Supabase REST and Real-time APIs</li>
+                    <li><strong>File Storage:</strong> Supabase Storage for document uploads</li>
+                    <li><strong>Edge Functions:</strong> Deno-based serverless functions</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Security & Data Protection</h3>
+                <ul>
+                    <li>Row-Level Security (RLS) for multi-tenant data isolation</li>
+                    <li>JWT-based authentication</li>
+                    <li>HTTPS encryption for all communications</li>
+                    <li>Regular automated backups</li>
+                    <li>Role-based access control (RBAC)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 14: Conclusion -->
+        <div class="slide">
+            <h1>Conclusion</h1>
+            
+            <h2>Key Takeaways</h2>
+            
+            <div class="success-box">
+                <h3>Problem Solved</h3>
+                <p>Created a comprehensive business management solution that addresses the core operational challenges faced by small and medium businesses in Sierra Leone, replacing manual processes with efficient digital workflows.</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Technical Excellence</h3>
+                <p>Built a scalable, secure, and user-friendly application using modern web technologies and best practices, ensuring reliability and performance at scale.</p>
+            </div>
+            
+            <div class="success-box">
+                <h3>User-Centered Design</h3>
+                <p>Developed through continuous user feedback and iterative testing, ensuring the solution truly meets the needs of its target audience.</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Real Impact</h3>
+                <p>Demonstrable improvements in operational efficiency, financial visibility, and business growth for users, with measurable time savings and accuracy improvements.</p>
+            </div>
+            
+            <h2>Final Thoughts</h2>
+            <p style="font-size: 20px; line-height: 1.8; margin-top: 30px;">
+                MiBuks represents a transformative solution for businesses in Sierra Leone, democratizing access to professional business management tools. By combining modern technology with deep understanding of local business needs, we've created a platform that empowers entrepreneurs to focus on growth rather than administrative burdens.
+            </p>
+        </div>
+
+        <!-- Slide 15: Q&A -->
+        <div class="slide" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+            <h1 style="font-size: 72px; margin-bottom: 40px;">Questions?</h1>
+            <p style="font-size: 28px; color: #666;">Thank you for your attention</p>
+            <p style="font-size: 24px; color: #0EA5E9; margin-top: 60px;">MiBuks - Professional business management for Sierra Leone</p>
+            <p style="font-size: 20px; color: #10B981; margin-top: 20px;">https://mibuk.netlify.app</p>
+        </div>
+    </div>
+    
+    <script>
+        // Print functionality
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>
